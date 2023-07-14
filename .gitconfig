@@ -1,0 +1,67 @@
+[user]
+	email = email
+	name = Hank Lin
+	signingkey = signingkey
+[core]
+  autocrlf = false
+  editor = vim
+	excludesfile = /Users/hank/.gitignore_global
+[alias]
+  co = checkout
+  cob = checkout -b
+  com = checkout master
+  cod = checkout develop
+  comi = checkout main
+
+  ci = commit
+  ca = commit -a
+
+  brd = branch -d
+  brdd = branch -D
+  brm = branch -m
+
+  st = status
+
+  br = branch
+  brls = branch -a
+
+  a = add
+  aa = add --all :/
+  au = add --update :/
+
+  p = pull -p
+  f = fetch
+  fp = fetch -p
+
+  d = diff
+  dc = diff --cached
+
+
+  ls = ls-tree -r --name-only
+  mff = merge --no-ff
+
+  pom = push origin master
+  pod = push origin develop
+
+  ht = log --pretty=format:\"%C(cyan)%ad%C(reset) %C(yellow)%h%C(reset) | %s%C(red)%d%C(reset) [%C(green)%an%C(reset) %ar]\" --graph --date=short
+  hist = log --pretty=oneline --abbrev-commit --graph
+  hist100 = log -100 --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  hist500 = log -500 --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
+  rc = rm --cached
+  rh = reset --hard
+  filelog = log --name-status --diff-filter="ACDMRT" -1 -U
+  dft = difftool -y HEAD^
+
+  info = remote -v
+  ru = remote update
+  cp = cherry-pick
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+[fetch]
+	parallel = 8
+	prune = true
+[help]
+	autocorrect = 1
