@@ -159,7 +159,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Docker
 if [[ -d /Applications/Docker.app ]]; then
-	for f in docker docker-compose; do
+	for f in docker; do
 		source /Applications/Docker.app/Contents/Resources/etc/${f}.zsh-completion
 		compdef _${f} ${f}
 		autoload -U _${f}
