@@ -160,8 +160,14 @@ export NVM_DIR="$HOME/.nvm"
 # Docker
 if [[ -d /Applications/Docker.app ]]; then
 	for f in docker; do
-		source /Applications/Docker.app/Contents/Resources/etc/${f}.zsh-completion
-		compdef _${f} ${f}
-		autoload -U _${f}
+  	source /Applications/Docker.app/Contents/Resources/etc/${f}.zsh-completion
+	  compdef _${f} ${f}
+	  autoload -U _${f}
 	done
 fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/hank/swag/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/hank/swag/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/hank/swag/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/hank/swag/google-cloud-sdk/completion.zsh.inc'; fi

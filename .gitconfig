@@ -43,7 +43,7 @@
   pom = push origin master
   pod = push origin develop
 
-  ht = log --pretty=format:\"%C(cyan)%ad%C(reset) %C(yellow)%h%C(reset) | %s%C(red)%d%C(reset) [%C(green)%an%C(reset) %ar]\" --graph --date=short
+  ht = log --pretty=format:\"%C(cyan)%ad%C(reset) %C(yellow)%h%C(reset) | %s%C(red)%d%C(reset) [%C(green)%an%C(reset) %ar]\" --graph --date=format:'%Y-%m-%d %H:%M'
   hist = log --pretty=oneline --abbrev-commit --graph
   hist100 = log -100 --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   hist500 = log -500 --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
